@@ -44,10 +44,10 @@ public class Akinator extends javax.swing.JFrame {
         win = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         btn1 = new javax.swing.JButton();
-        btn2 = new javax.swing.JButton();
         btn4 = new javax.swing.JButton();
         btn3 = new javax.swing.JButton();
         btn5 = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
         Titulo = new javax.swing.JLabel();
         Texto = new javax.swing.JLabel();
 
@@ -84,13 +84,6 @@ public class Akinator extends javax.swing.JFrame {
             }
         });
 
-        btn2.setText("2");
-        btn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
-            }
-        });
-
         btn4.setText("4");
         btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +105,13 @@ public class Akinator extends javax.swing.JFrame {
             }
         });
 
+        btn2.setText("2");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -121,11 +121,11 @@ public class Akinator extends javax.swing.JFrame {
                 .addComponent(btn1)
                 .addGap(18, 18, 18)
                 .addComponent(btn2)
-                .addGap(18, 18, 18)
+                .addGap(10, 10, 10)
                 .addComponent(btn3)
-                .addGap(18, 18, 18)
+                .addGap(14, 14, 14)
                 .addComponent(btn4)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn5)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -135,10 +135,10 @@ public class Akinator extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn1)
-                    .addComponent(btn2)
                     .addComponent(btn3)
                     .addComponent(btn4)
-                    .addComponent(btn5))
+                    .addComponent(btn5)
+                    .addComponent(btn2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -225,53 +225,31 @@ public class Akinator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        int val = 1;
-     win.setVisible(false);
+        
+        win.setVisible(false);
          pensa.setVisible(true);
          padrao.setVisible(false);
-       int num = (int) (1 + Math.random() * (6 - 1));
-       String acertou = ("<html>Parabéns você adivinhou eu estava pensando no número " + num + "</html>");
-        String errou = ("<html>Errado eu pensei no numero " + num + "</html>");
-
-        String  res = (val == num)?acertou:errou;
-        Texto.setText(res);
-         if (res == acertou){
+       
+       Operacao r = new Operacao();
+       r.val = 1;
+       r.Reposta();
+       Texto.setText(r.res);
+        if (r.res.equals(r.acertou)){
             win.setVisible(true);
             padrao.setVisible(false);
             pensa.setVisible(false);
-        }
     }//GEN-LAST:event_btn1ActionPerformed
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        int val = 2;   
-       win.setVisible(false);
-         pensa.setVisible(true);
-         padrao.setVisible(false);
-       int num = (int) (1 + Math.random() * (6 - 1));
-       String acertou = ("<html>Parabéns você adivinhou eu estava pensando no número " + num + "</html>");
-        String errou = ("<html>Errado eu pensei no numero " + num + "</html>");
-
-        String  res = (val == num)?acertou:errou;
-        Texto.setText(res);
-         if (res == acertou){
-            win.setVisible(true);
-            padrao.setVisible(false);
-            pensa.setVisible(false);
-        }
-    }//GEN-LAST:event_btn2ActionPerformed
-
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        int val = 3;    
+           
       win.setVisible(false);
          pensa.setVisible(true);
          padrao.setVisible(false);
-       int num = (int) (1 + Math.random() * (6 - 1));
-       String acertou = ("<html>Parabéns você adivinhou eu estava pensando no número " + num + "</html>");
-        String errou = ("<html>Errado eu pensei no numero " + num + "</html>");
-
-        String  res = (val == num)?acertou:errou;
-        Texto.setText(res);
-         if (res == acertou){
+       Operacao r = new Operacao();
+       r.val = 3;
+       r.Reposta();
+       Texto.setText(r.res);
+        if (r.res.equals(r.acertou)){
             win.setVisible(true);
             padrao.setVisible(false);
             pensa.setVisible(false);
@@ -279,17 +257,15 @@ public class Akinator extends javax.swing.JFrame {
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        int val = 4;    
+           
       win.setVisible(false);
          pensa.setVisible(true);
          padrao.setVisible(false);
-       int num = (int) (1 + Math.random() * (6 - 1));
-       String acertou = ("<html>Parabéns você adivinhou eu estava pensando no número " + num + "</html>");
-        String errou = ("<html>Errado eu pensei no numero " + num + "</html>");
-
-        String  res = (val == num)?acertou:errou;
-        Texto.setText(res);
-         if (res == acertou){
+       Operacao r = new Operacao();
+       r.val = 4;
+       r.Reposta();
+       Texto.setText(r.res);
+        if (r.res.equals(r.acertou)){
             win.setVisible(true);
             padrao.setVisible(false);
             pensa.setVisible(false);
@@ -297,22 +273,35 @@ public class Akinator extends javax.swing.JFrame {
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        int val = 5;    
+            
          win.setVisible(false);
          pensa.setVisible(true);
          padrao.setVisible(false);
-       int num = (int) (1 + Math.random() * (6 - 1));
-       String acertou = ("<html>Parabéns você adivinhou eu estava pensando no número " + num + "</html>");
-        String errou = ("<html>Errado eu pensei no numero " + num + "</html>");
+       Operacao r = new Operacao();
+       r.val = 5;
+       r.Reposta();
+       Texto.setText(r.res);
+        if (r.res.equals(r.acertou)){
+            win.setVisible(true);
+            padrao.setVisible(false);
+            pensa.setVisible(false);
+    }//GEN-LAST:event_btn5ActionPerformed
 
-        String  res = (val == num)?acertou:errou;
-        Texto.setText(res);
-         if (res == acertou){
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+      
+        win.setVisible(false);
+         pensa.setVisible(true);
+         padrao.setVisible(false);
+      Operacao r = new Operacao();
+       r.val = 2;
+       r.Reposta();
+       Texto.setText(r.res);
+        if (r.res.equals(r.acertou)){
             win.setVisible(true);
             padrao.setVisible(false);
             pensa.setVisible(false);
         }
-    }//GEN-LAST:event_btn5ActionPerformed
+    }//GEN-LAST:event_btn2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -350,9 +339,9 @@ public class Akinator extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Texto;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JButton btn1;
+    public javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
-    private javax.swing.JButton btn3;
+    public javax.swing.JButton btn3;
     private javax.swing.JButton btn4;
     private javax.swing.JButton btn5;
     private javax.swing.JButton jButton6;
