@@ -225,7 +225,6 @@ public class Akinator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        
         win.setVisible(false);
          pensa.setVisible(true);
          padrao.setVisible(false);
@@ -238,6 +237,7 @@ public class Akinator extends javax.swing.JFrame {
             win.setVisible(true);
             padrao.setVisible(false);
             pensa.setVisible(false);
+        }
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
@@ -285,6 +285,7 @@ public class Akinator extends javax.swing.JFrame {
             win.setVisible(true);
             padrao.setVisible(false);
             pensa.setVisible(false);
+        }
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
