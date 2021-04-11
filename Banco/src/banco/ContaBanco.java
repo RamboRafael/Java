@@ -5,7 +5,6 @@ public class ContaBanco {
     private String Dono;
     private double saldo;
     private String status;
-    public double valor;
     
     public void info(){
         System.out.println("Tipo da Conta " +this.tipoConta);
@@ -26,14 +25,14 @@ public class ContaBanco {
             this.status = "Desativada";
     }
     }
-    public double depositar(){
+    public double depositar(double v){
         if(status .equals("Ativa")){
-            this.saldo+=this.valor;
+            this.saldo+=v;
     }return 0;
     }
-    public double sacar(){
-        if(status .equals("Ativa") && this.saldo>=this.valor){
-            this.saldo-=this.valor;
+    public double sacar(double v){
+        if(status .equals("Ativa") && this.saldo>=v){
+            this.saldo-=v;
     }return 0;
     }
     public void pagarMensal(){

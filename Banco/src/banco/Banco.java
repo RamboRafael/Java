@@ -5,8 +5,8 @@ public class Banco {
       
        c1.setTipoConta("cp");
        c1.abrirConta();
-       c1.setValor(50);
-      // c1.sacar();
+       
+       c1.sacar(30);
       c1.pagarMensal();
       
        c1.info();
