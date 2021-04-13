@@ -75,13 +75,8 @@ public class ContaBanco {
         this.saldo = saldo;
     }
 
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
+  
+    
     
             
 }     
