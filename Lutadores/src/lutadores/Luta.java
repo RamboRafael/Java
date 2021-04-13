@@ -1,4 +1,5 @@
 package lutadores;
+import java.util.Random;
 public class Luta {
     private Lutador desafiado;
     private Lutador desafiante;
@@ -8,7 +9,8 @@ public class Luta {
     public void marcarLuta(Lutador l1,Lutador l2 ){
         if(l1.getCategoria().equals (l2.getCategoria()) && l1 != l2){
         aprovada = true;
-        
+        this.desafiado = l1;
+        this.desafiante = l2;
             System.out.println("Luta entre "+l1.getNome()+" e "+ l2.getNome() +" marcada. ");
         
     } else{
@@ -22,9 +24,12 @@ public class Luta {
         if(aprovada == false){
             System.out.println("Luta não pode acontecer");
     }else {
-            desafiante.apresentar();
-            desafiado.apresentar();
-             int vencedor =(int)(0 + Math.random() * (3 - 0));
+            desafiante.Status();
+            desafiado.Status();
+            Random aleatorio = new Random();
+            int vencedor = aleatorio.nextInt(3);
+            
+           //  int vencedor =(int)(0 + Math.random() * (3 - 0));
             switch (vencedor) {
                 case 1:
                     desafiante.ganharLuta();
