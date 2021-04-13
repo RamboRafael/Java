@@ -8,16 +8,20 @@ public class Luta {
     public void marcarLuta(Lutador l1,Lutador l2 ){
         if(l1.getCategoria().equals (l2.getCategoria()) && l1 != l2){
         aprovada = true;
-        setDesafiado(l1);
-        setDesafiante(l2);
+        
             System.out.println("Luta entre "+l1.getNome()+" e "+ l2.getNome() +" marcada. ");
         
-    } else 
-            System.out.println("Categorias diferentes");
+    } else{
+        setAprovada (false);
+        System.out.println("Categorias diferentes ou são o mesmo lutador.");
+        this.desafiado = null;
+        this.desafiante = null;
         }
-  
+    }
     public void lutar(){
-        if(aprovada){
+        if(aprovada == false){
+            System.out.println("Luta não pode acontecer");
+    }else {
             desafiante.apresentar();
             desafiado.apresentar();
              int vencedor =(int)(0 + Math.random() * (3 - 0));
@@ -36,9 +40,8 @@ public class Luta {
                     System.out.println("A luta empatou!" );
                     break;
             }
-             
-        }else{ System.out.println("Luta não pode acontecer");
-    }
+        } 
+            
     }
 
     public Lutador getDesafiado() {
