@@ -25,7 +25,10 @@ public class Lutadores {
    Luta fc = new Luta();{
         fc.marcarLuta(l[0], l[1]);
         fc.lutar();
+        
     }
+   l[0].Status();
+   l[1].Status();
         
     }
     

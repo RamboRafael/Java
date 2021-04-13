@@ -48,7 +48,7 @@ public class Lutador {
         System.out.println(this.nome +" Ganhou a luta");
     }
     public void perderLuta(){
-        this.setDerrotas(getDerrotas()-1);
+        this.setDerrotas(getDerrotas()+1);
         System.out.println(this.nome+" Perdeu a luta");
     }
     public void empatarLuta(){
