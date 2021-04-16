@@ -5,6 +5,8 @@
  */
 package classes;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author RamboPC
@@ -22,6 +24,47 @@ public class Akinator extends javax.swing.JFrame {
         pensa.setVisible(false);
         
         
+    }
+    public JLabel getTexto() {
+        return Texto;
+    }
+
+    public void setTexto(JLabel Texto) {
+        this.Texto = Texto;
+    }
+
+    public JLabel getPadrao() {
+        return padrao;
+    }
+
+    public void setPadrao(JLabel padrao) {
+        this.padrao = padrao;
+    }
+
+    public JLabel getPensa() {
+        return pensa;
+    }
+
+    public void setPensa(JLabel pensa) {
+        this.pensa = pensa;
+    }
+
+    public JLabel getWin() {
+        return win;
+    }
+
+    public void setWin(JLabel win) {
+        this.win = win;
+    }
+    public void erro(){
+         win.setVisible(false);
+         pensa.setVisible(true);
+         padrao.setVisible(false);
+    }
+    public void acerto(){
+        win.setVisible(true);
+        padrao.setVisible(false);
+        pensa.setVisible(false);
     }
 
     /**
@@ -225,82 +268,64 @@ public class Akinator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        win.setVisible(false);
-         pensa.setVisible(true);
-         padrao.setVisible(false);
-       
+        
+       this.erro();
        Operacao r = new Operacao();
        r.val = 1;
        r.Reposta();
        Texto.setText(r.res);
         if (r.res.equals(r.acertou)){
-            win.setVisible(true);
-            padrao.setVisible(false);
-            pensa.setVisible(false);
+            this.acerto();
         }
     }//GEN-LAST:event_btn1ActionPerformed
 
+    
+
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
            
-      win.setVisible(false);
-         pensa.setVisible(true);
-         padrao.setVisible(false);
+      this.erro();
        Operacao r = new Operacao();
        r.val = 3;
        r.Reposta();
        Texto.setText(r.res);
         if (r.res.equals(r.acertou)){
-            win.setVisible(true);
-            padrao.setVisible(false);
-            pensa.setVisible(false);
+            this.acerto();
         }
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
            
-      win.setVisible(false);
-         pensa.setVisible(true);
-         padrao.setVisible(false);
+      this.erro();
        Operacao r = new Operacao();
        r.val = 4;
        r.Reposta();
        Texto.setText(r.res);
         if (r.res.equals(r.acertou)){
-            win.setVisible(true);
-            padrao.setVisible(false);
-            pensa.setVisible(false);
+            this.acerto();
         }
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
             
-         win.setVisible(false);
-         pensa.setVisible(true);
-         padrao.setVisible(false);
+         this.erro();
        Operacao r = new Operacao();
        r.val = 5;
        r.Reposta();
        Texto.setText(r.res);
         if (r.res.equals(r.acertou)){
-            win.setVisible(true);
-            padrao.setVisible(false);
-            pensa.setVisible(false);
+            this.acerto();
         }
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
       
-        win.setVisible(false);
-         pensa.setVisible(true);
-         padrao.setVisible(false);
+        this.erro();
       Operacao r = new Operacao();
        r.val = 2;
        r.Reposta();
        Texto.setText(r.res);
         if (r.res.equals(r.acertou)){
-            win.setVisible(true);
-            padrao.setVisible(false);
-            pensa.setVisible(false);
+            this.acerto();
         }
     }//GEN-LAST:event_btn2ActionPerformed
 
