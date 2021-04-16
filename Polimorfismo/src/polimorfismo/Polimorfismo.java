@@ -10,6 +10,9 @@ public class Polimorfismo {
      dog.alimentar();
      dog.emitirSom();
      dog.locomover();
+     dog.reagir("Ola");
+     dog.reagir(false);
+     dog.reagir(14, 30);
               
     }
     

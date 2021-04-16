@@ -6,6 +6,28 @@ public class Cachorro extends Animal{
     public void emitirSom(){
         System.out.println("Au Au!");
     }
+    public void reagir( String frase){
+        if("Ola".equals(frase) || "Toma comida".equals(frase)) {
+            System.out.println("Abanar o rabo");
+        }else{
+            System.out.println("Rosnar");
+        }
+    }
+    public void reagir( int hora, int min){
+        if(hora<12){
+            System.out.println("Pedir comida");
+        }else{
+            System.out.println("Rosnar");
+        }
+        
+    }
+    public void reagir(boolean dono){
+        if(dono=true){
+            System.out.println("Abanar o rabo");
+        }else{
+            System.out.println("Latir");
+        }
+    }
 
     @Override
     public void locomover() {
