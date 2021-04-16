@@ -22,7 +22,7 @@ public class Cachorro extends Animal{
         
     }
     public void reagir(boolean dono){
-        if(dono=true){
+        if(dono){
             System.out.println("Abanar o rabo");
         }else{
             System.out.println("Latir");
